@@ -1,0 +1,8 @@
+select 
+	class_id,count(class_id) cid_num 
+from 
+	student 
+group by 
+	class_id 
+having 
+	cid_num > 1;
