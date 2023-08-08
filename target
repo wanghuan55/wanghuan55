@@ -1,0 +1,4 @@
+if ~coder.target('MATLAB')
+   coder.cinclude('foo.h');
+   coder.ceval('foo');
+end
