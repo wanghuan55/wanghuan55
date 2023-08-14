@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include<string.h>
+int cmp_char(const void* c1, const void* c2)
+{
+	return (*(char*)c1) - (*(char*)c2);
+}
+int main() 
+{
+	char a[1001] = { 0 };
+	gets(a);
+	int len = strlen(a);
+	qsort(a, len, sizeof(char), cmp_char);
+	printf("%s", a);
+}
