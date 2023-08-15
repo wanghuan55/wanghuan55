@@ -1,0 +1,16 @@
+if (p == NULL || q == NULL)
+    {
+        return false;
+    }
+    return p->val == q->val && _isSymmetric(p->left, q->right) && _isSymmetric(p->right, q->left);
+}
+ 
+bool isSymmetric(struct TreeNode* root)
+{
+    if (root == NULL)
+    {
+        return true;
+    }
+    return _isSymmetric(root->left, root->right);
+ 
+}
